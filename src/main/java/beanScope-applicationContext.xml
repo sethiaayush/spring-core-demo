@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<!-- Info on scope of the object based on each request -->
+	<!-- singleton : Create a single shared instance of the bean. Default Scope 
+		Only one object created for complete application, state-less bean -->
+	<!-- prototype : Create a new bean instance for each container request Good 
+		for statefull data, create a new bean for each request -->
+	<!-- request : Scoped to an HTTP web request. Only used for web apps -->
+	<!-- session : Scoped to an HTTP web session. Only used for web apps -->
+	<!-- global-session : Scoped to a global HTTP web session. Only used for 
+		web apps -->
+
+	<bean id="myFortune"
+		class="com.sethi.aayush.spring_core_xml.HappyFortuneService">
+	</bean>
+
+	<bean id="myCoachSingleton"
+		class="com.sethi.aayush.spring_core_xml.BaseballCoach">
+		<!-- set up constructor injection -->
+		<constructor-arg ref="myFortune" />
+	</bean>
+
+	<bean id="myCoach"
+		class="com.sethi.aayush.spring_core_xml.BaseballCoach" scope="prototype">
+		<!-- set up constructor injection -->
+		<constructor-arg ref="myFortune" />
+	</bean>
+
+
+</beans>
