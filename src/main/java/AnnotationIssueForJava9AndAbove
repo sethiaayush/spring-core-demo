@@ -2,7 +2,7 @@ HEADS UP - FOR JAVA 9, 10 and 11 USERS - @PostConstruct and @PreDestroy
 
 If you are using Java 9, 10 or 11, then you will encounter an error when using @PostConstruct and @PreDestroy in your code.
 
-These are the steps to resolve it. Come back to the lecture if you hit the error. 
+These are the steps to resolve it.
 
 Error
 

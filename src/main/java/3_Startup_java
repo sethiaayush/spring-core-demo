@@ -1,0 +1,16 @@
+Spring_Core_java
+
+Open JavaConfigDemoApp : Use SportPackageInterconnectConfig in place of xml file.
+This is java based configuration.
+Check out for @Configuration and @ComponentScan Annotations.
+Close JavaConfigDemoApp: Rest works same as Annotations based.
+
+Open SwimJavaConfigDemoApp : Use SportConfig in place of xml file.
+This is java based configuration.
+Check out for @Configuration and @PropertySource Annotations.
+@Bean is used over methods, and method names are used as string to get beans from the annotation context.
+Close SwimJavaConfigDemoApp
+
+Debug the main method, to learn more.
+
+

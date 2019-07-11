@@ -13,7 +13,6 @@ public class BadmintonCoachAnnotation implements CoachAnnotation {
 
 	@Override
 	public String getDailyWorkout() {
-
 		return "Practice footwork movement";
 	}
 

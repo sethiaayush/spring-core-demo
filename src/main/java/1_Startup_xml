@@ -1,0 +1,39 @@
+Spring_Core_xml
+
+Open HelloSpringApp : Constructor Injection
+1. XML based mapping, start with Hello Spring App.
+2. Check for hierarchy of Coach and Fortune Service Interfaces.
+3. Open applicationContext.xml to look for mappings.
+4. Analyse, debug is supported.
+Close HelloSpringApp
+
+Open SetterDemoApp : Setter Injection
+1. XML based mapping, start with SetterDemoApp.
+2. Open applicationContext.xml to look for mappings.
+3. Check for hierarchy of Coach and look for CricketCoach.
+	3.a: No args constructor is there to support setter injection, as there is already parameterised constructor.
+	3.b: All the instance variables are set using mapping from applicationContext.xml, values are from either xml file or look for sports.properties file. 
+4. Analyse, debug is supported.
+Close SetterDemoApp
+
+Open BeanScopeDemoApp : Bean Scope
+1. Open BeanScopeDemoApp and beanScope-applicationContext.xml.
+2. Look for singletonScope and Prototype scope in this module.
+3. Check for stateless* and statefull objects.
+4. Analyse, debug is supported.
+Close BeanScopeDemoApp
+
+Open BeanLifeCycleDemoApp : Bean Life Cycle
+1. Open BeanLifeCycleDemoApp and beanLifeCycle-applicationContext.xml
+2. Look for singleton object with init/destroy method.
+3. Analyse, debug is supported.
+4. Destroy method for prototype is never called, for singleton it is called post closing the context.
+5. Read beanLifeCycle txt file to learn why this happened.
+Close BeanLifeCycleDemoApp
+
+*
+Stateless object is an instance of a class without instance fields (instance variables). 
+The class may have fields, but they are compile-time constants (static final).
+
+A very much related term is immutable. Immutable objects may have state, but it does not change when a 
+method is invoked (method invocations do not assign new values to fields). These objects are also thread-safe.

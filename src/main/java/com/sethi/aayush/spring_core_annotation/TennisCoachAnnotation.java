@@ -20,7 +20,7 @@ public class TennisCoachAnnotation implements CoachAnnotation {
 		return "Practice your backhand volley";
 	}
 
-	// Prefered to make code more readable
+	// Preferred to make code more readable
 	// Not really required if there is only one constructor in the class
 	// So program will work even if @Autowired is commented out.
 	/*
