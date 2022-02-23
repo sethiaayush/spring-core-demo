@@ -30,7 +30,7 @@ public class SoccerDefaultBeanIdAnnotationCoach implements CoachAnnotation {
 	@Autowired
 	@Qualifier("happyFortuneServiceAnnotation")
 	public void setFortune(FortuneServiceAnnotation fortune) {
-		System.out.println("SoccerDefaultBeanIdAnnotationCoach : inside setDailyFortune");
+		System.out.println("SoccerDefaultBeanIdAnnotationCoach : Inside setDailyFortune");
 		this.fortune = fortune;
 	}
 

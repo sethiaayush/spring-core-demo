@@ -1,0 +1,86 @@
+Inversion of control is a design principle which helps to invert the control of object creation.
+
+According to the paper written by Martin Fowler , inversion of control is the principle where the control flow of a program is inverted: 
+instead of the programmer controlling the flow of a program, the external sources (framework, services, other components) take control of it. 
+It's like we plug something into something else. He mentioned an example about EJB 2.0.
+
+Dependency Injection is a design pattern which implements IOC principle. DI provides objects that an object needs. 
+Let’s say, class X is dependent on Y. So rather than creating object of Y within the class “X”, we can inject the dependencies via a constructor or setter injection.
+
+IOC
+Design Principle::It is design principle where the control flow of the program is inverted
+Implementation::It is a term which is implemented by multiple design patterns  service locator , events , delegates and dependency Injection
+Use Case::Aspect oriented programing is one way to implement IOC
+
+DI
+Design Principle::It is one of the subtypes of the IOC principle  
+Implementation::DI is design pattern which can be achieved by constructor and setter injection
+Use Case::In Case of change in business requirement no code change required
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Service Locator
+The service locator pattern is a design pattern used in software development to encapsulate the processes involved in obtaining a service with a strong abstraction layer. 
+This pattern uses a central registry known as the “service locator” which on request returns the information necessary to perform a certain task.
+The ServiceLocator is responsible for returning instances of services when they are requested for by the service consumers or the service clients.
+credits:- https://www.geeksforgeeks.org/service-locator-pattern/
+
+Advantages :
+Applications can optimize themselves at run-time by selectively adding and removing items from the service locator.
+Large sections of a library or application can be completely separated. The only link between them becomes the registry.
+
+Disadvantages :
+The registry makes the code more difficult to maintain (opposed to using Dependency injection), because it becomes unclear when you would be introducing a breaking change.
+The registry hides the class dependencies causing run-time errors instead of compile-time errors when dependencies are missing.
+
+Strategies
+The following strategies are used to implement service Locator Pattern :
+EJB Service Locator Strategy : This strategy uses EJBHome object for enterprise bean components and this EJBHome is cached in the ServiceLocator for future use when 
+								the client needs the home object again.
+JMS Queue Service Locator Strategy : This strategy is applicable to point to point messaging requirements. The following the strategies under JMS Queue Service Locator Strategy.
+									 JMS Topic Service Locator Strategy
+									 JMS Queue Service Locator Strategy
+Type Checked Service Locator Strategy : This strategy has trade-offs. It reduces the flexibility of lookup, which is in the Services Property Locator strategy, 
+										but add the type checking of passing in a constant to the ServiceLocator.getHome() method.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What Is Inversion of Control?
+Inversion of Control is a principle in software engineering which transfers the control of objects or portions of a program to a container or framework. 
+We most often use it in the context of object-oriented programming.
+
+In contrast with traditional programming, in which our custom code makes calls to a library, IoC enables a framework to take control of the flow of a program 
+and make calls to our custom code. To enable this, frameworks use abstractions with additional behavior built in. If we want to add our own behavior, 
+we need to extend the classes of the framework or plugin our own classes.
+
+The advantages of this architecture are:
+1. decoupling the execution of a task from its implementation
+2. making it easier to switch between different implementations
+3. greater modularity of a program
+4. greater ease in testing a program by isolating a component or mocking its dependencies, and allowing components to communicate through contracts
+
+We can achieve Inversion of Control through various mechanisms such as: Strategy design pattern, Service Locator pattern, Factory pattern, and Dependency Injection (DI).
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What Is Dependency Injection?
+Dependency injection is a pattern we can use to implement IoC, where the control being inverted is setting an object's dependencies.
+Connecting objects with other objects, or “injecting” objects into other objects, is done by an assembler rather than by the objects themselves.
+
+There are three main styles of dependency injection:-
+1. Constructor Injection
+2. Interface Injection
+3. Setter Injection
+
+e.g. Pico Container(Constructor Injection{Preferred} + Setter Injection),
+     NanoContainer(PicoContainer + Read configuration from XML),
+     Spring IOC ContainerConstructor Injection + Setter Injection{Preferred},
+     Apache Avalon(Closed)(Interface Injection) 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The Spring IoC Container
+An IoC container is a common characteristic of frameworks that implement IoC.
+
+In the Spring framework, the interface ApplicationContext represents the IoC container. 
+The Spring container is responsible for instantiating, configuring and assembling objects known as beans, as well as managing their life cycles.
+
+The Spring framework provides several implementations of the ApplicationContext interface: 
+ClassPathXmlApplicationContext and FileSystemXmlApplicationContext for standalone applications, 
+and WebApplicationContext for web applications.
+
+In order to assemble beans, the container uses configuration metadata, which can be in the form of XML configuration or annotations.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

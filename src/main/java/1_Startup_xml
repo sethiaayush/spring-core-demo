@@ -31,9 +31,7 @@ Open BeanLifeCycleDemoApp : Bean Life Cycle
 5. Read beanLifeCycle txt file to learn why this happened.
 Close BeanLifeCycleDemoApp
 
-*
-Stateless object is an instance of a class without instance fields (instance variables). 
+*Stateless object is an instance of a class without instance fields (instance variables). 
 The class may have fields, but they are compile-time constants (static final).
-
 A very much related term is immutable. Immutable objects may have state, but it does not change when a 
 method is invoked (method invocations do not assign new values to fields). These objects are also thread-safe.

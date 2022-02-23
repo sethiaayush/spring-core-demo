@@ -8,9 +8,12 @@ Close JavaConfigDemoApp: Rest works same as Annotations based.
 Open SwimJavaConfigDemoApp : Use SportConfig in place of xml file.
 This is java based configuration.
 Check out for @Configuration and @PropertySource Annotations.
-@Bean is used over methods, and method names are used as string to get beans from the annotation context.
+@Bean*** is used over methods, and method names are used as string to get beans from the annotation context.
 Close SwimJavaConfigDemoApp
 
 Debug the main method, to learn more.
 
-
+***@Bean
+@Bean annotation indicates that the annotated method produces a bean to be managed by the Spring container
+Other important Annotation used in spring
+https://www.baeldung.com/spring-bean-annotations

@@ -30,10 +30,9 @@ public class BaseballCoach implements Coach {
 		System.out.println("BaseballCoach : inside method doMyStartupStuff");
 	}
 
-	/*
-	 * public void doMyStartupStuff(String test) {
-	 * System.out.println("BaseballCoach : inside method doMyStartupStuff"); }
-	 */
+	public void doMyStartupStuff(String test) {
+		System.out.println("BaseballCoach : inside method doMyStartupStuff::test");
+	}
 
 	// add a destroy-method
 	public void doMyCleanupStuff() {

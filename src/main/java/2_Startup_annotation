@@ -5,20 +5,23 @@ Open AnnotationDemoApp : Constructor Injection
 2. Check for hierarchy of CoachAnnotation and open TennisCoachAnnotation class and look for @Component Annotation above class name.
 3. Check for hierarchy of FortuneServiceAnnotation and open RandomFortuneServiceAnnotation class and look for @Component Annotation above class name.
 tennisCoach:TennisCoachAnnotation
-4. @Autowired Annotation is there on TennisCoachAnnotation Constructor.
+4. @Autowired** Annotation is there on TennisCoachAnnotation Constructor.
 5. Notice @Qualifer annotation used in the constructor parameter: Read Document : QualifierConstructorInjection.
 	5.1 @Scope("prototype") is there to mark the scope
 	5.2 @PreDestroy and @PostConstruct are  bean life cycle methods : Read Document : AnnotationLifeCycle
+	
 soccerDefaultBeanIdAnnotationCoach:SoccerDefaultBeanIdAnnotationCoach : Setter Injection - Multiple Setters
 6. Use of default component name here, and 2 @autowired annotation with use of Qualifier.
+
 badmintonCoachAnnotation:BadmintonCoachAnnotation: Instance Variable based Injection, using @Autowired
 7. Observe @Autowired and @Qualifier on instance variable which is private.
+
 swimCoachAnnotation:SwimCoachAnnotation: Read from properties file.
 8. Look for @Value annotation, read is done from Properties files, specified in applicationContextAnnotation.xml file.
  
 9. Analyse, debug is supported and look for printed messages for calling sequence of methods. 
 Close AnnotationDemoApp
-
+---------------------------------------------------------------------------------------
 Open AnnotationBeanScopeDemoApp : Bean Scope Analysis : Read Document : AnnotationLifeCycle
 1. Open AnnotationBeanScopeDemoApp, SwimCoachAnnotation and TennisCoachAnnotation Classes.
 2. Look for singletonScope(Default) and Prototype scope in the classes.
@@ -28,3 +31,12 @@ Close AnnotationBeanScopeDemoApp
 
 If using Java 9 and above then read document : AnnotationIssueForJava9AndAbove
 For Bean Introspector read document with name: JavaBeansIntrospector
+**Autowired:-It allows Spring to resolve and inject collaborating beans into our bean.||resolving bean conflicts using @Qualifier annotation
+@Autowired on Properties::This eliminates the need for getters and setters
+@Autowired on Setters
+@Autowired on Constructors
+Credits:: https://www.baeldung.com/spring-autowire
+Features:-
+Autowiring by Custom Qualifier-Create Custom Qualifier annotation, add features of Annotation
+Autowiring by Name:-Spring uses the bean's name as a default qualifier value. 
+It will inspect the container and look for a bean with the exact name as the property to autowire it.

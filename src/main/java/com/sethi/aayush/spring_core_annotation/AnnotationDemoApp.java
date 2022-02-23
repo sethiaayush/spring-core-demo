@@ -17,7 +17,7 @@ public class AnnotationDemoApp {
 		CoachAnnotation coachFieldAutowiring = context.getBean("badmintonCoachAnnotation", CoachAnnotation.class);
 
 		SwimCoachAnnotation coachPropertiesFile = context.getBean("swimCoachAnnotation", SwimCoachAnnotation.class);
-
+		System.out.println("---------------------------------------------------------------------------------------");
 		// call a method on the bean
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getDailyFortune());

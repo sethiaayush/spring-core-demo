@@ -14,7 +14,15 @@
 		Only one object created for complete application, state-less bean -->
 	<!-- prototype : Create a new bean instance for each container request Good 
 		for statefull data, create a new bean for each request -->
+	<!--Mark mark1 = context.getBean("mark"); 
+	Mark mark2 = context.getBean("mark"); 
+	mark1 == mark2; //This will return true-->
+
 	<!-- request : Scoped to an HTTP web request. Only used for web apps -->
+	<!--Mark mark1 = context.getBean("mark"); 
+	Mark mark2 = context.getBean("mark"); 
+	mark1 == mark2; //This will return false-->
+	
 	<!-- session : Scoped to an HTTP web session. Only used for web apps -->
 	<!-- global-session : Scoped to a global HTTP web session. Only used for 
 		web apps -->
@@ -22,7 +30,7 @@
 	<bean id="myFortune"
 		class="com.sethi.aayush.spring_core_xml.HappyFortuneService">
 	</bean>
-
+	<!-- singleton -->
 	<bean id="myCoachSingleton"
 		class="com.sethi.aayush.spring_core_xml.BaseballCoach">
 		<!-- set up constructor injection -->
